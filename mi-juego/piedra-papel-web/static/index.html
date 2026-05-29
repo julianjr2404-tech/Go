@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Piedra Papel o Tijera</title>
+
+    <style>
+
+        body{
+            background:#111;
+            color:white;
+            font-family:Arial;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            height:100vh;
+            margin:0;
+        }
+
+        .contenedor{
+            text-align:center;
+        }
+
+        h1{
+            margin-bottom:40px;
+        }
+
+        .botones{
+            display:flex;
+            gap:20px;
+            justify-content:center;
+        }
+
+        button{
+            font-size:70px;
+            padding:20px;
+            border:none;
+            border-radius:20px;
+            cursor:pointer;
+            transition:0.3s;
+        }
+
+        button:hover{
+            transform:scale(1.1);
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <div class="contenedor">
+
+        <h1>PIEDRA PAPEL O TIJERA</h1>
+
+        <div class="botones">
+
+            <form action="/jugar" method="POST">
+                <input type="hidden" name="opcion" value="piedra">
+                <button type="submit">🪨</button>
+            </form>
+
+            <form action="/jugar" method="POST">
+                <input type="hidden" name="opcion" value="papel">
+                <button type="submit">📄</button>
+            </form>
+
+            <form action="/jugar" method="POST">
+                <input type="hidden" name="opcion" value="tijera">
+                <button type="submit">✂️</button>
+            </form>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>
